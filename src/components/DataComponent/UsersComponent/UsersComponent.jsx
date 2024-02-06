@@ -1,10 +1,13 @@
-import React from "react";
+import { useState } from "react";
 import { BsGraphUpArrow } from "react-icons/bs";
 import Circle from "../../../helpers/CirclePie/Circle";
 import { FaChevronRight } from "react-icons/fa";
 import { RiVipCrownLine } from "react-icons/ri";
 import { IoStatsChartSharp } from "react-icons/io5";
+import { motion } from "framer-motion";
+import { BiTrendingUp } from "react-icons/bi";
 const UsersComponent = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div className="allUsersDetails">
@@ -19,25 +22,25 @@ const UsersComponent = () => {
       <div className="total-Condition">
         <div className="total-earnings">
           <div className="earnings-icon">
-            <BsGraphUpArrow />
+            <BiTrendingUp />
           </div>
           <div className="spanTag">
             <span>Total Earnings</span>
             <span>450,549</span>
           </div>
         </div>
-        <div className="total-sales">
+        <motion.div className="total-sales">
           <div className="sales-icon">
-          <RiVipCrownLine />
+            <RiVipCrownLine />
           </div>
           <div className="spanTag">
             <span>Sales</span>
             <span>450,549</span>
           </div>
-        </div>
+        </motion.div>
         <div className="total-purchase">
           <div className="purchase-icon">
-          <IoStatsChartSharp />
+            <IoStatsChartSharp />
           </div>
           <div className="spanTag">
             <span>Purchase</span>
@@ -49,17 +52,15 @@ const UsersComponent = () => {
         <div className="PieCharts-inner">
           <Circle percentage={60} color={"#00b929"} />
           <div className="active-users">
-          <span>123,456</span>
+            <span>123,456</span>
             <span>Active users</span>
-            
           </div>
         </div>
         <div className="PieCharts-inner">
           <Circle percentage={20} color={"#023aff"} />
           <div className="active-users">
-          <span>123,456</span>
+            <span>123,456</span>
             <span>New users</span>
-            
           </div>
         </div>
       </div>
