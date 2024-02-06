@@ -1,12 +1,11 @@
-import React from "react";
+import React from 'react'
 
 const WorldMapComponent = () => {
-  
   return (
     <div>
-     
+      
     </div>
-  );
-};
+  )
+}
 
-export default WorldMapComponent;
+export default WorldMapComponent

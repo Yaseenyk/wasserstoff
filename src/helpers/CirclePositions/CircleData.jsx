@@ -75,7 +75,7 @@ export const circlesData = [
     {
       top: 170,
       left: 320,
-      content: "",
+      content: ["Development", "$31,657"],
       width: 100,
       height: 100,
       backgroundColor: "#ff00ff",
@@ -104,7 +104,7 @@ export const circlesData = [
     {
       top: "42vh",
       left: "19vw",
-      content: "",
+      content: ["Design", "$32,982", "3 month"],
       width: 120,
       height: 120,
       backgroundColor: "#008080",
@@ -161,7 +161,7 @@ export const circlesData = [
     {
       top: "19vh",
       left: "23vw",
-      content: "",
+      content: ["Investments", "$76,644", "3 month"],
       width: 200,
       height: 200,
       backgroundColor: "#000080",
@@ -189,7 +189,7 @@ export const circlesData = [
     {
       top: "38vh",
       left: "34vw",
-      content: "",
+      content: '',
       width: "18px",
       height: "18px",
       backgroundColor: "#808000",
@@ -203,7 +203,7 @@ export const circlesData = [
     {
       top: "25vh",
       left: "34vw",
-      content: "",
+      content: ["Business", "$21,987"],
       width: 100,
       height: 100,
       backgroundColor: "#FFA500",
@@ -307,7 +307,7 @@ export const circlesData = [
     {
       top: '6vh',
       left: '26vw',
-      content: "",
+      content: ["Finance", "$23,657"],
       width: 110,
       height: 110,
       backgroundColor: "#FFA500",

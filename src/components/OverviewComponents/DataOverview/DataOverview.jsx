@@ -43,14 +43,14 @@ const DataOverview = () => {
         </div>
       </div>
       <div className="plusMinus">
-        <div className="divPlusMinus">
+        <div className="divPlusMinus" style={{cursor:"pointer"}}>
           <span>+</span>
           <span>-</span>
         </div>
-        <div className="circleDot">
+        <div className="circleDot" style={{cursor:"pointer"}}>
           <TbCircleDot />
         </div>
-        <div className="Icons">
+        <div className="Icons" style={{cursor:"pointer"}}>
           <div>
             <AiOutlineBranches />
           </div>

@@ -6,10 +6,14 @@
   align-items: center;
   justify-content: flex-start;
   // border: 1px solid black;
-  .worldMap{
+  .worldMap {
     // border: 1px solid;
     height: 100%;
     width: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
   }
   .user-component {
@@ -188,7 +192,7 @@
 .BottomComponent {
   height: 15%;
   width: 90%;
-//   border: 1px solid red;
+  //   border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,7 +237,7 @@
       .lines {
         width: 98%;
         height: 4px;
-        border-radius: 10px; 
+        border-radius: 10px;
         background: linear-gradient(
           to right,
           #ffa63f 0%,
@@ -248,10 +252,9 @@
   }
 }
 
-
-.Popup{
+.Popup {
   position: absolute;
-  top:18vh;
+  top: 18vh;
   // border: 1px solid;
   border-radius: 20px;
   background-color: white;

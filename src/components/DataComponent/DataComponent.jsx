@@ -1,5 +1,8 @@
+import React, { Suspense, lazy } from "react";
 import UsersComponent from './UsersComponent/UsersComponent';
-import WorldMapComponent from './WorldMapComponent/WorldMapComponent';
+
+// Lazy load WorldMapComponent
+const LazyWorldMapComponent = lazy(() => import('./WorldMapComponent/WorldMapComponent'));
 
 const DataComponent = () => {
   return (
@@ -8,10 +11,12 @@ const DataComponent = () => {
         <UsersComponent/>
       </div>
       <div className='worldMap'>
-        <WorldMapComponent/>
+        <Suspense fallback={<div>Loading...</div>}>
+          <LazyWorldMapComponent />
+        </Suspense>
       </div>
     </>
   )
 }
 
-export default DataComponent
+export default DataComponent;

@@ -2,7 +2,7 @@ import React from 'react'
 import DataComponent from '../../components/DataComponent/DataComponent'
 import BottomComponent from '../../components/BottomComponent/BottomComponent'
 import './Dashboard.scss'
-import Popup from '../../helpers/Popup/Popup'
+// import Popup from '../../helpers/Popup/Popup'
 const Dashboard = () => {
   return (
     <>
@@ -12,9 +12,9 @@ const Dashboard = () => {
       <div className='BottomComponent'>
       <BottomComponent/>
       </div>
-      <div className='Popup'>
+      {/* <div className='Popup'>
         <Popup/>
-      </div>
+      </div> */}
     </>
   )
 }
