@@ -12,7 +12,7 @@ const DataOverview = () => {
 
   return (
     <div className="mainContainer">
-      <div className="timeline">Timeline</div>
+      <div className="timeline">TIMELINE</div>
       <div className="wBars">
         <span>1W</span>
         <span>1M</span>

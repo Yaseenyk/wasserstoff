@@ -2,9 +2,11 @@
 import { Outlet } from 'react-router-dom';
 import Footer from "../components/Footer/Footer.jsx";
 import Navbar from "../components/Navbar/Navbar";
+import {PopupProvider} from './../context/PopupContext.jsx'
 const Homepage = () => {
   return (
     <>
+    <PopupProvider>
       <div className="navbar">
         <Navbar />
       </div>
@@ -14,6 +16,7 @@ const Homepage = () => {
       <div className="footer">
         <Footer />
       </div>
+    </PopupProvider>
     </>
   );
 };
