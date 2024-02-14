@@ -1,11 +1,18 @@
+@import './../../index.scss';
+
 .TopComponent {
   height: 85%;
-  width: 90%;
+  width: 90vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   // border: 1px solid black;
+  @include tablet{
+    // border: 1px solid;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
   .worldMap {
     // border: 1px solid;
     height: 90%;
@@ -15,6 +22,17 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    @include tablet{
+      // border: 1px solid;
+      width: 100%;
+      height: 70%;
+    }
+    svg{
+      @include tablet{
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
   .user-component {
     height: 100%;
@@ -25,6 +43,13 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    @include tablet{
+      flex-direction: row;
+      width: 100%;
+      height: 30%;
+      position: relative;
+      justify-content: flex-start;
+    }
     .allUsersDetails {
       // border: 1px solid;
       width: 100%;
@@ -34,7 +59,11 @@
       align-items: flex-start;
       justify-content: center;
       gap: 10px;
-
+      @include tablet{
+       height: 100%;
+       width: 30%;
+        justify-content: flex-start;  
+      }
       .allUsers {
         // border: 1px solid;
         width: 80%;
@@ -44,24 +73,46 @@
         align-items: flex-end;
         gap: 10px;
         color: #383874;
+        @include tablet{
+         padding-bottom: 5px;
+          
+        }
         .allUsersInfo {
           font-size: 16px;
           font-weight: 700;
+          // border: 1px solid;
+          margin-bottom: -3px;
+          @include tablet{
+            font-size: 14px;
+            // padding-bottom: 2px;
+          }
         }
         span {
           font-family: 'Roboto', sans-serif;
           font-size: 10px;
+          @include tablet{
+            font-size: 8px;
+            // padding-bottom: 2px;
+          }
           font-weight: 700;
           svg {
             font-size: 8px;
+            @include tablet{
+              font-size: 6px;
+              
+            }
           }
         }
       }
       .Users {
         // border: 1px solid;
         font-weight: 600;
-        font-size: 72px;
+        font-size: 3.5vw;
         color: #383874;
+        @include tablet{
+          font-size: 40px;
+
+        }
       }
     }
     .total-Condition {
@@ -73,11 +124,23 @@
       justify-content: center;
       align-items: center;
       gap: 20px;
+      @include tablet{
+        height: 40%;
+        width: 80%;
+        position: absolute;
+        top: 1vh;
+        left: 20vw;
+        flex-direction: row;
+        // align-items: flex-start;
+      }
       .total-earnings {
         width: 80%;
         // border: 1px solid;
         display: flex;
         gap: 20px;
+        @include tablet{
+        
+        }
         .earnings-icon {
           // border: 1px solid;
           height: 50px;
@@ -89,6 +152,11 @@
           background-color: #8676ff;
           color: white;
           font-size: 24px;
+          @include tablet{
+            width: 50px;
+            height: 45px;
+            border-radius: 12px;
+          }
         }
         span:first-child {
           font-family: 'Roboto', sans-serif;
@@ -118,6 +186,11 @@
           background-color: #66c8ff;
           color: white;
           font-size: 16px;
+          @include tablet{
+            width: 50px;
+            height: 45px;
+            border-radius: 12px;
+          }
         }
         span:first-child {
           font-family: 'Roboto', sans-serif;
@@ -147,6 +220,11 @@
           background-color: #ff9066;
           color: white;
           font-size: 16px;
+          @include tablet{
+            width: 50px;
+            height: 45px;
+            border-radius: 12px;
+          }
         }
         span:first-child {
           font-family: 'Roboto', sans-serif;
@@ -172,7 +250,19 @@
       // border: 1px solid;
       display: flex;
       width: 100%;
-
+      // flex-wrap: wrap;
+      @include tablet{
+        height: 30%;
+        width: 60%;
+        position: absolute;
+        top: 10vh;
+        height: 50%;
+        // width: auto;
+        left: 20vw;
+        flex-direction: row;
+        gap: 40px;
+        // justify-content: space-evenly;
+      }
       .PieCharts-inner {
         display: flex;
         justify-content: center;
@@ -185,6 +275,11 @@
           span{
             width: 6vw;
             font-size: 14px;
+            @include tablet{
+              font-size: 12px;
+            //  border: 1px solid;
+             width: 100%;
+            }
           }
           span:first-child {
             font-size: 20px;
@@ -207,7 +302,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .background-color {
+  .backgroundColor {
     width: 100%;
     height: 60%;
     border-radius: 14px;
@@ -215,6 +310,10 @@
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
       rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     display: flex;
+    @include tablet{
+      // border: 1px solid black;
+      height: 50%;
+    }
     .salesComponent {
       // border: 1px solid;
       display: flex;
@@ -223,7 +322,11 @@
       align-items: center;
       width: 10%;
       gap: 5px;
-
+      @include tablet{
+        // border: 1px solid black;
+        width: 15%;
+        gap: 0px;
+      }
       span:first-child {
         font-size: 12px;
         font-weight: 600;
@@ -280,4 +383,10 @@
   align-items: center;
   gap: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  @include tablet{
+    top: 6vh;
+    width: 80vw;
+    left: 8vw;
+
+  }
 }

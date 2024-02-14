@@ -1,10 +1,21 @@
-import React from "react";
-import { circlesData } from "./CircleData";
+import React, { useEffect, useState } from "react";
+import { circlesData,circlesTabletData } from "./CircleData";
 import './Circle.scss';
+import { useView } from "../../context/ViewContext";
 const CirclePositions = () => {
+  const[circleData,setCircleData]=useState([])
+  const {view}= useView();
+  useEffect(()=>{
+    console.log(view)
+    if(view==='tablet'){
+      setCircleData(circlesTabletData)
+    }else if(view==='desktop'){
+      setCircleData(circlesData)
+    }
+  },[view])
   return (
     <>
-      {circlesData.map((circle, index) => (
+      {circleData.map((circle, index) => (
         <div
           key={index}
           className="circle"

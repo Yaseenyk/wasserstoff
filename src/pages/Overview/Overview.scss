@@ -1,3 +1,4 @@
+@import "./../../index.scss";
 .OverviewContainer {
   // border: 2px solid black;
   height: calc(100vh - 100px);
@@ -5,6 +6,13 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  @include tablet{
+    flex-direction: column;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    align-items: center;
+    height: 150vh;
+  }
   //Left Container
   .leftContainer {
     // border: 1px solid red;
@@ -16,13 +24,24 @@
     align-items: center;
     background-color: #ffffff;
     gap: 30px;
+    @include tablet{
+    // border: 1px solid;
+    flex-direction: row;
+    width: 90vw;
+    height: 40vh;
+    flex-wrap: wrap;
+  }
     .Design-faster {
       width: 80%;
       // border: 1px solid black;
       font-size: 28px;
       font-weight: 400;
+      @include tablet{
+      display: none;
+    }
       .divDesignFaster {
         text-align: center;
+        
       }
     }
     .card-background {
@@ -37,6 +56,11 @@
       width: 75%;
       height: 40%;
       border-radius: 14px;
+      @include tablet{
+        // border: 1px solid;
+        width: 30%;
+        height: 90%;
+      }
       .pie-chart {
         // border: 1px solid black;
         width: 60%;
@@ -45,6 +69,9 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        @include tablet{
+          display: none;
+        }
       }
       .divTotalEarningsMoney {
         // border: 1px solid black;
@@ -54,10 +81,14 @@
         align-items: center;
         height: 22%;
         width: 80%;
+        @include tablet{
+          height: 50%;
+        }
         .Total-earning {
           font-family: "Roboto", sans-serif;
           font-size: 20px;
           font-weight: 400;
+          
         }
         .written-word {
           font-family: "Roboto", sans-serif;
@@ -66,16 +97,20 @@
           color: #9292c1;
         }
         .Money {
-          //   border: 1px solid black;
+          // border: 1px solid black;
           width: 100%;
           display: flex;
           justify-content: center;
           align-items: flex-end;
           height: 40%;
           gap: 2px;
+          
           .moneyDollar {
             font-size: 20px;
             font-weight: 600;
+            // @include tablet{
+            //   display: none;
+            // }
           }
           .percentageGap {
             // border: 1px solid;
@@ -83,6 +118,7 @@
             justify-content: center;
             align-items: flex-end;
             height: 90%;
+            
             span:first-child {
               //   border: 1px solid;
               font-size: 20px;
@@ -112,6 +148,9 @@
         justify-content: center;
         align-items: center;
         gap: 5px;
+        @include tablet{
+          height: 50%;
+        }
         .Presentation {
           //   border: 1px solid black;
           display: flex;
@@ -146,15 +185,15 @@
             position: relative;
             .column {
               height: 100%;
-             border-left: 7px solid #e6e8f5;
-             border-right: 7px solid #e6e8f5;
-          }
-          .lines{
-            // border: 1px solid;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-          }
+              border-left: 7px solid #e6e8f5;
+              border-right: 7px solid #e6e8f5;
+            }
+            .lines {
+              // border: 1px solid;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+            }
           }
         }
       }
@@ -172,22 +211,27 @@
       font-family: "Roboto", sans-serif;
       box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
         rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-
+        @include tablet{
+          // border: 1px solid;
+          width: 30%;
+          height: 90%;
+          gap: 20px;
+        }
       .divPresentation {
         display: flex;
         // border: 1px solid;
         width: 100%;
         justify-content: center;
         gap: 20px;
-
+        
         .divNumbers {
-          font-family: 'Roboto', sans-serif;
+          font-family: "Roboto", sans-serif;
           font-size: 14px;
           font-weight: 400;
           color: #9292c1;
         }
         span {
-          font-family: 'Roboto', sans-serif;
+          font-family: "Roboto", sans-serif;
           color: #383874;
           //   border: 1px solid;
           width: 30%;
@@ -196,7 +240,7 @@
           letter-spacing: 0.44px;
         }
         .divEarnings {
-          font-family: 'Roboto', sans-serif;
+          font-family: "Roboto", sans-serif;
           font-size: 14px;
           font-weight: 400;
           color: #383874;
@@ -225,6 +269,11 @@
       box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
         rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
         rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        @include tablet{
+          // border: 1px solid;
+          height: 90%;
+          width: 30%;
+        }
       .totalEarnings {
         height: 45%;
         width: 80%;
@@ -234,6 +283,7 @@
         align-items: center;
         gap: 2px;
         padding: 5px;
+        
         &:first-child {
           border-bottom: 1px solid rgba(107, 107, 107, 0.637);
         }
@@ -243,6 +293,7 @@
           width: 100%;
           // border: 1px solid black;
           font-family: "Poppins", sans-serif;
+          
         }
         .dollarsEarnings {
           width: 100%;
@@ -260,11 +311,13 @@
           }
           span:first-child {
             font-size: 30px;
+            
           }
           span:last-child {
             margin-left: -3px;
             margin-bottom: 3px;
             color: #38f261;
+            
           }
         }
         .totalCompared {
@@ -272,6 +325,7 @@
           width: 100%;
           font-size: 10px;
           font-weight: 400;
+          
           // border: 1px solid black;
         }
       }
@@ -284,10 +338,14 @@
     border-top-left-radius: 42px;
     border-bottom-left-radius: 42px;
     height: 100%;
-    background-color: #EEF0FA;
+    background-color: #eef0fa;
     width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include tablet{
+      width: 100%;
+      border-radius: 0px;
+    }
   }
 }

@@ -4,7 +4,7 @@ import CustomBarChart from "./CustomBarChart/CustomBarChart";
 const BottomComponent = () => {
   return (
     <>
-      <div className="background-color">
+      <div className="backgroundColor">
         <div className="salesComponent">
           <span>Sales Figures</span>
           <span>$10,200</span>

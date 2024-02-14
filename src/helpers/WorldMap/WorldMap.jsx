@@ -4,7 +4,7 @@ const WorldMap = () => {
   return (
     <div>
       <svg
-        width="1501"
+        width="100%"
         height="894"
         viewBox="0 0 1501 894"
         fill="none"

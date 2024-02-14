@@ -3,6 +3,7 @@ const ToolTip = ({ content, info, style,icon,backgroundColor }) => {
     const iconStyle = {
         backgroundColor:backgroundColor,
     }
+    
   return (
     <div className="tooltip" style={style}>
     <div className="icon" style={iconStyle}>

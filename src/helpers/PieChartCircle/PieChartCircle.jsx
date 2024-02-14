@@ -1,18 +1,33 @@
 import { motion } from "framer-motion";
 import { FaRegDotCircle } from "react-icons/fa";
+import { useView } from "../../context/ViewContext";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const PieChartCircle = ({ percentage, color, circlePercentage }) => {
+  const {view}=useView()
+  const[radius,setRaduis]=useState('');
+  const[secondCircle,setSecondCircle]=useState('')
+ 
+  useEffect(()=>{
+    if(view==='desktop'){
+      setRaduis(40)
+      setSecondCircle(30)
+    }else if(view==='tablet'){
+      setRaduis(15);
+      setSecondCircle(25);
+    }
+  },[view]);
   const circumference = 251.2;
   const offset = circumference - (circumference * percentage) / 100;
   const smallOffset = circumference - (circumference * circlePercentage) / 100;
-
   return (
     <div>
       <svg width="100" height="100" viewBox="0 0 100 100">
         <motion.circle
           cx="50"
           cy="50"
-          r="40"
+          r={radius}
           fill="none"
           stroke="#dbdff1"
           strokeWidth="3"
@@ -22,7 +37,7 @@ const PieChartCircle = ({ percentage, color, circlePercentage }) => {
         <motion.circle
           cx="50"
           cy="50"
-          r="40"
+          r={radius}
           fill="none"
           stroke={color}
           strokeWidth="6"
@@ -36,7 +51,7 @@ const PieChartCircle = ({ percentage, color, circlePercentage }) => {
         <motion.circle
           cx="50"
           cy="50"
-          r="40"
+          r={radius}
           fill="none"
           stroke="#8676ff"
           strokeWidth="6"
@@ -50,7 +65,7 @@ const PieChartCircle = ({ percentage, color, circlePercentage }) => {
         <motion.circle
           cx="50"
           cy="50"
-          r="30"
+          r={secondCircle}
           fill="none"
           stroke="#dbdff1"
           strokeWidth="3"
@@ -60,7 +75,7 @@ const PieChartCircle = ({ percentage, color, circlePercentage }) => {
         <motion.circle
           cx="50"
           cy="50"
-          r="30"
+          r={secondCircle}
           fill="none"
           stroke="#ffba69"
           strokeWidth="6"

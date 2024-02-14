@@ -1,3 +1,5 @@
+@import './../../index.scss';
+
 .popupDiv {
   // border: 1px solid;
   display: flex;
@@ -42,11 +44,14 @@
 }
 
 .charts {
-  //   border: 1px solid;
+    // border: 1px solid;
   width: 48vw;
   height: 46vh;
   padding: 10px;
   color: #9595aa;
+  @include tablet{
+    width: 100%;
+  }
   .top-bar {
     display: flex;
     // border: 1px solid red;
@@ -99,6 +104,9 @@
         align-items: center;
         gap: 5px;
         z-index: 10;
+        @include tablet{
+          left: 28vw;
+        }
         span:first-child{
           font-size: 22px;
           letter-spacing: 1px;
@@ -124,6 +132,9 @@
         top: 22vh;
         left: 10vw;
         z-index: 9;
+        @include tablet{
+         left: 16vw; 
+        }
       }
       .thirdCircle {
         position: absolute;
@@ -139,6 +150,9 @@
         top: 32vh;
         left: 15vw;
         z-index: 8;
+        @include tablet{
+         left:25vw 
+        }
       }
       .forthCircle {
         position: absolute;
@@ -149,6 +163,10 @@
         backdrop-filter: blur(10px);
         top: 20vh;
         left: 8vw;
+        @include tablet{
+         left: 14vw;
+         top: 18vh; 
+        }
       }
       .fifthCircle {
         position: absolute;
@@ -160,6 +178,9 @@
         backdrop-filter: blur(10px);
         top: 28vh;
         left: 7.5vw;
+        @include tablet{
+         left: 10vw; 
+        }
       }
       .sixthCircle {
         position: absolute;
@@ -173,6 +194,9 @@
         backdrop-filter: blur(10px);
         top: 35vh;
         left: 5vw;
+        @include tablet{
+         left: 8vw; 
+        }
       }
       .seventhCircle {
         position: absolute;
@@ -184,6 +208,10 @@
         backdrop-filter: blur(10px);
         top: 35vh;
         left: 28vw;
+        @include tablet{
+          top: 38vh;
+         left: 20vw; 
+        }
       }
       .eightCircle {
         position: absolute;
@@ -195,6 +223,9 @@
         backdrop-filter: blur(10px);
         top: 20vh;
         left: 35vw;
+        @include tablet{
+          left: 56vw; 
+        }
       }
       .nineCircle {
         position: absolute;
@@ -208,6 +239,9 @@
         backdrop-filter: blur(10px);
         top: 25vh;
         left: 33vw;
+        @include tablet{
+         left: 58vw; 
+        }
       }
       .tenCircle {
         position: absolute;
@@ -222,6 +256,9 @@
         backdrop-filter: blur(10px);
         top: 23vh;
         left: 36vw;
+        @include tablet{
+         left: 62vw; 
+        }
       }
       .elevenCircle {
         position: absolute;
@@ -236,6 +273,9 @@
         backdrop-filter: blur(10px);
         top: 20vh;
         left: 40vw;
+        @include tablet{
+         left: 69vw; 
+        }
       }
       .tweleCircle {
         position: absolute;
@@ -250,6 +290,9 @@
         backdrop-filter: blur(10px);
         top: 28vh;
         left: 41vw;
+        @include tablet{
+         left: 72vw; 
+        }
       }
       .thirteenCircle {
         position: absolute;
@@ -261,6 +304,9 @@
         backdrop-filter: blur(10px);
         top: 30vh;
         left: 46vw;
+        @include tablet{
+         left: 58vw; 
+        }
       }
       .fourteenCircle {
         position: absolute;
@@ -272,6 +318,10 @@
         backdrop-filter: blur(10px);
         top: 32vh;
         left: 47vw;
+        @include tablet{
+          top: 36vh;
+         left: 50vw; 
+        }
       }
     }
   }
