@@ -11,10 +11,11 @@ const Homepage = () => {
   useEffect(() => {
     // Check if the active route is "overview"
     const isOverviewPage = location.pathname.includes("/overview");
-
     // Set the body background color based on the active page
     document.body.style.backgroundColor = isOverviewPage ? "white" : "#eef0fa";
   }, [location.pathname]);
+
+
   return (
     <>
     <PopupProvider>

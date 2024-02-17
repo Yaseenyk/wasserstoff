@@ -1,7 +1,7 @@
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
-import Dashboard from './pages/Dashboard/Dashboard';
+import GamesAnalytics from './pages/Dashboard/GamesAnalytics';
 import Homepage from './pages/Homepage'
-import Statistics from './pages/Statistics/Statistics'
+import GameDashboard from './pages/Download/GameDashboard'
 import Overview from './pages/Overview/Overview';
 import Analytics from './pages/Analytics/Analytics';
 
@@ -14,11 +14,11 @@ function App() {
 <BrowserRouter>
         <Routes>
           <Route path='/' element={<Homepage />}>
-            <Route index element={<Dashboard />} />
-            <Route path='/dashboard' element={<Dashboard />} />
-            <Route path='/statistics' element={<Statistics />} />
+            <Route index element={<GameDashboard />} />
+            <Route path='/dashboard' element={<  GameDashboard />} />
+            <Route path='/Download' element={<Analytics />} />
             <Route path='/overview' element={<Overview />} />
-            <Route path='/analytics' element={<Analytics />} />
+            <Route path='/analytics' element={<GamesAnalytics />} />
           </Route>
         </Routes>
       </BrowserRouter>

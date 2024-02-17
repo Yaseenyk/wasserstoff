@@ -1,0 +1,276 @@
+@import "./../../index.scss";
+
+.gamesCard {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  gap: 20px;
+  width: 30%;
+  height: 20vh;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  background-size: cover;
+  background-position: top;
+  color: white;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.76);
+    border-radius: inherit;
+  }
+  @include tablet {
+    // border: 1px solid red;
+    width: 100%;
+  }
+  .gaming-card-inner {
+    z-index: 100;
+    // border: 1px solid white;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .Title {
+      font-size: 1vw;
+      font-weight: 500;
+      width: fit-content;
+      @include tablet {
+        font-size: 2vw;
+      }
+    }
+    .Rupees {
+      // border: 1px solid white;
+      width: 60%;
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      text-align: center;
+      background-color: #8676ff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+  .imgInner {
+    width: 50%;
+    height: 100%;
+    z-index: 100;
+    // border: 1px solid;
+    img {
+      right: 0;
+      top: 0;
+      position: absolute;
+      height: 100%;
+    }
+  }
+}
+
+.PopupDiv {
+  position: absolute;
+  width: 80vw;
+  height: 80vh;
+  top: 10vh;
+  left: 10vw;
+  bottom: 0;
+  background-color: white;
+  z-index: 300;
+  // border: 1px solid red;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    // border: 1px solid red;
+  }
+  .TopContainer {
+    color: white;
+    // border: 1px solid white;
+    font-size: 20px;
+    z-index: 200;
+    width: 100%;
+    text-align: right;
+    svg {
+      // border: 1px solid;
+      padding: 5px;
+      border-radius: 50%;
+      background-color: white;
+      color: #8676ff;
+      cursor: pointer;
+    }
+  }
+  .mainContainer {
+    // border: 1px solid white;
+    z-index: 200;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    @include tablet {
+    //   border: 1px solid red;
+      flex-direction: column-reverse;
+    }
+    .leftPopupContainer {
+      // border: 1px solid;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 50%;
+      @include tablet {
+        // padding: 10px;
+        text-align: justify;
+        width: 100%;
+        gap: 5px;
+        height: 50%;
+      }
+      .Title {
+        // border: 1px solid black;
+        font-size: 3vw;
+        font-weight: 600;
+        text-align: center;
+
+        @include tablet {
+          font-size: 4vw;
+        }
+      }
+      .Desc {
+        // border: 1px solid;
+        font-size: 1.2vw;
+        @include tablet {
+            // padding: 10px;
+            font-size: 1.8vw;
+          }
+          p{
+            @include tablet {
+                margin: 0;
+                padding:0px 20px;
+                
+              } 
+          }
+        span {
+          font-size: 1.5vw;
+          font-weight: 600;
+        }
+      }
+      .Ratings {
+        font-size: 3vw;
+        span {
+          font-weight: 600;
+          font-size: 1.5vw;
+        }
+      }
+      .Date {
+        font-size: 3vw;
+        span {
+          font-weight: 600;
+          font-size: 1.5vw;
+        }
+      }
+      .Category {
+        font-size: 3vw;
+        span {
+          font-size: 1.5vw;
+        }
+      }
+    }
+    .rightPopupContainer {
+      width: 50%;
+      height: 100%;
+      // border: 1px solid;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
+      gap: 20px;
+
+      @include tablet {
+        // border: 1px solid red;
+        width: 100%;
+        height: 50%;
+        gap: 10px;
+        align-items: center !important;
+      }
+      .ImgBackground {
+        height: 50%;
+        width: 100%;
+        // border: 1px solid;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+          //   border: 1px solid red;
+          height: 80%;
+          width: 80%;
+        }
+      }
+      .Rupees {
+        // border: 1px solid black;
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        @include tablet {
+          justify-content: center;
+          height: 15%;
+        }
+        .Span-inner {
+          background-color: #8676ff !important;
+          text-align: end;
+          padding-right: 40px;
+          width: 30%;
+          border-radius: 6px;
+          cursor: pointer;
+
+          @include tablet {
+            // border: 1px solid red;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            padding-right: 0px;
+          }
+          &:hover {
+            background-color: #fff !important;
+            color: #8676ff !important;
+          }
+          span {
+            font-size: 1vw;
+
+            @include tablet {
+              font-size: 2vw;
+            }
+          }
+          .PriceDiv {
+            font-size: 2vw;
+            font-weight: 700;
+
+            display: inline-block;
+
+            @include tablet {
+              font-size: 3vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

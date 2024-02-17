@@ -1,0 +1,66 @@
+@import './../../index.scss';
+.Heading-section{
+    font-size: 4vw;
+    @include tablet{
+        font-size: 6vw;
+    }
+}
+.subHeading{
+    font-size: 1vw;
+    @include tablet{
+        font-size: 2vw;
+    }
+}
+.Search-section{
+    // border: 1px solid white;
+    margin-top: 20px;
+    height: 5vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .SearchDashboard{
+        border: 1px solid white;
+        width: 50%;
+        height: 20%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        gap: 20px;
+        @include tablet{
+            width: 90%;
+        }
+        input{
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            width: 90%;
+            // height: 100%;
+            &:focus{
+                outline: none;
+            }
+        }
+        svg{
+            color: black;
+            cursor: pointer;
+            &:hover{
+                color: #FF9066;
+            }
+        }
+    }
+    .FilerDashboard{
+        // border: 1px solid;
+        height: 100%;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        gap: 20px;
+    }
+}
